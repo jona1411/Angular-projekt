@@ -1,5 +1,18 @@
-app.controller("presentController",function($scope){
+(function(){
+var app = angular.module('absenceList', []);
 
-$scope.absenceList = present;
+app.controller('StudentsController', function($scope) {
+  $scope.studentList = students;
 
 });
+
+var students =[
+{ name: 'Jens', absence: true},
+{ name: 'Henrik', absence: false},
+{ name: 'Peter',absence: false},
+{ name: 'Bastian', absence: true}
+];
+
+
+
+})();
