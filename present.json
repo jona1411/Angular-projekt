@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Bastian",
+    "present": true
+  },
+  {
+    "name": "Jonathan",
+    "present": true
+  },
+  {
+    "name": "Henrik",
+    "present": true
+  },
+  {
+    "name": "Jens",
+    "present": false
+  },
+  {
+    "name": "Troels",
+    "present": true
+  },
+  {
+    "name": "Peter",
+    "present": false
+  },
+  {
+    "name": "Charlotte",
+    "present": true
+  }
+]
