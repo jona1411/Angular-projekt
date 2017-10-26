@@ -1,39 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" ng-app="absenceList">
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <style>
 
+     <style>
+       .heading,h1 {
+         text-align: center;
+       }
+     </style>
 </head>
 
-<body >
+<body ng-controller="StudentsController">
 
 <main class="container-fluid">
 
   <section class="row">
     <section class="col-md-6">
-      <table>
-
-        <tr>
-          <th></th>
-
-        </tr>
-
+      <table class="table table-sm">
+        <tbody>
+          <tr>
+            <th>
+              <p class="heading" ng-repeat="student in studentList" ng-hide="student.absence">
+                 {{student.name}} - {{student.absence}}</p>
+            </th>
+          </tr>
+        </tbody>
       </table>
     </section>
 
     <section class="col-md-6">
-<table>
-
-  <tr>
-    <th></th>
-
-  </tr>
+      <table class="table table-sm">
+        <tbody>
+          <tr>
+            <th>
+              <p class="heading"  ng-repeat="student in studentList" ng-show="student.absence">
+                 {{student.name}} - {{student.absence}}</p>
+            </th>
+          </tr>
+        </tbody>
+      </table>
 
 </table>
     </section>
