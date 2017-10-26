@@ -12,34 +12,54 @@
        .heading,h1 {
          text-align: center;
        }
+       body {
+         background-color: Red;
+       }
+
+       p {
+         color: beige;
+       }
+
+       th {
+         color: beige;
+       }
+
+       h1 {
+         color: beige;
+       }
      </style>
 </head>
 
 <body ng-controller="StudentsController">
 
 <main class="container-fluid">
-
+  <section class="col-md-12"><h1>tilstede?<h1></section>
   <section class="row">
-    <section class="col-md-6">
+
+    <section class="col-md-12">
       <table class="table table-sm">
         <tbody>
           <tr>
             <th>
               <p class="heading" ng-repeat="student in studentList" ng-hide="student.absence">
-                 {{student.name}} - {{student.absence}}</p>
+                 {{student.name}} - {{student.id}}</p>
             </th>
           </tr>
         </tbody>
       </table>
     </section>
+  </section>
 
-    <section class="col-md-6">
+  <section class="col-md-12"><h1>fraværende?<h1></section>
+  <section class="row">
+
+    <section class="col-md-12">
       <table class="table table-sm">
         <tbody>
           <tr>
             <th>
               <p class="heading"  ng-repeat="student in studentList" ng-show="student.absence">
-                 {{student.name}} - {{student.absence}}</p>
+                 {{student.name}} - {{student.id}}</p>
             </th>
           </tr>
         </tbody>
@@ -48,6 +68,7 @@
 </table>
     </section>
   </section>
+
 
 
 </main>
