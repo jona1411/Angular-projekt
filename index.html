@@ -53,7 +53,10 @@
           <tr>
             <th>
               <p class="heading" ng-repeat="student in studentList" ng-hide="student.absence">
-                 {{student.name}} - ID: {{student.id}}</p>
+
+                 {{student.name}} - dage til stede - {{student.id}}</p>
+                 {{student.name}} - dage til stede -{{student.id}}</p>
+
             </th>
           </tr>
         </tbody>
@@ -70,7 +73,9 @@
           <tr>
             <th>
               <p class="heading"  ng-repeat="student in studentList" ng-show="student.absence">
-                 {{student.name}} - Hej ID:{{student.id}}</p>
+                 {{student.name}} -  dage fraværende -{{student.id}}</p>
+
+                 {{student.name}} - dage fraværende -{{student.id}}</p>
             </th>
           </tr>
         </tbody>
