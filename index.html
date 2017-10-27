@@ -7,33 +7,38 @@
     <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
 
      <style>
        .heading,h1 {
          text-align: center;
        }
+
        body {
-         background-color: Red;
+           background-color: grey;
+       }
+       .container {
+         background-color: #eeeeee;
+           width: 60%;
        }
 
-       p {
-         color: beige;
+       p, th, h1 {
+         color: #111111;
        }
 
-       th {
-         color: beige;
-       }
+         h1 {
+             padding: 60px 0 20px 0;
+         }
 
-       h1 {
-         color: beige;
-       }
      </style>
 </head>
 
 <body ng-controller="StudentsController">
 
 <main class="container-fluid">
-  <section class="col-md-12"><h1>tilstede?<h1></section>
+    <div class="container">
+  <section class="col-md-12"><h1>Tilstedeværende<h1></section>
   <section class="row">
 
     <section class="col-md-12">
@@ -50,7 +55,7 @@
     </section>
   </section>
 
-  <section class="col-md-12"><h1>fraværende?<h1></section>
+  <section class="col-md-12"><h1>Fraværende<h1></section>
   <section class="row">
 
     <section class="col-md-12">
@@ -68,7 +73,7 @@
 </table>
     </section>
   </section>
-
+    </div>
 
 
 </main>
