@@ -28,7 +28,14 @@
        }
 
          h1 {
-             padding: 60px 0 20px 0;
+             padding: 60px 0 0 0;
+         }
+
+         img {
+             position: fixed;
+             z-index: -1;
+             top: 0;
+             left: 0
          }
 
      </style>
@@ -47,7 +54,7 @@
           <tr>
             <th>
               <p class="heading" ng-repeat="student in studentList" ng-hide="student.absence">
-                 {{student.name}} - {{student.id}}</p>
+                 {{student.name}} - ID: {{student.id}}</p>
             </th>
           </tr>
         </tbody>
@@ -64,17 +71,17 @@
           <tr>
             <th>
               <p class="heading"  ng-repeat="student in studentList" ng-show="student.absence">
-                 {{student.name}} - {{student.id}}</p>
+                 {{student.name}} - ID:{{student.id}}</p>
             </th>
           </tr>
         </tbody>
       </table>
-
 </table>
     </section>
   </section>
     </div>
 
+    <img src="giphy.gif">
 
 </main>
 

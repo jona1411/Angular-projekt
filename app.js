@@ -1,8 +1,13 @@
 (function(){
     var app = angular.module('absenceList', []);
 
-    app.controller('StudentsController', function($scope) {
+    app.controller('StudentsController', function($scope, $http) {
         $scope.studentList = students;
+
+        $http.get("present.json")
+            .then(function(response) {
+                $scope.myStudents = response.data;
+            });
 
     });
 
@@ -22,7 +27,5 @@
         { name: 'George', absence: false, id: 13},
         { name: 'Slick Rick', absence: true, id: 14}
     ];
-
-
 
 })();
